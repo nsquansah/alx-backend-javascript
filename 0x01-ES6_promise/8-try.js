@@ -1,14 +1,5 @@
-function getCurrentYear() {
-  const date = new Date();
-  return date.getFullYear();
+export default function divideFunction(numerator, denominator) {
+  if (denominator === 0) throw new Error('cannot divide by 0');
+  return numerator / denominator;
 }
-
-export default function getBudgetForCurrentYear(income, gdp, capita) {
-  const budget = {
-    [`income-${getCurrentYear()}`]: income,
-    [`gdp-${getCurrentYear()}`]: gdp,
-    [`capita-${getCurrentYear()}`]: capita,
-  };
-
-  return budget;
 
